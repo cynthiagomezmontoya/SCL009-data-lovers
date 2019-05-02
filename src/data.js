@@ -3,6 +3,8 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
+const ourData = POKEMON.pokemon;
+
 const filterData = (data, condition) => {
   return data.filter(function(monster) {
     for (var key in condition) {
