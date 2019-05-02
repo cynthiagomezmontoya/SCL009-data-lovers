@@ -1,0 +1,17 @@
+body{
+	background-image: url(https://cdn.bulbagarden.net/media/upload/thumb/2/2f/Unova_Route_3_anime.png/800px-Unova_Route_3_anime.png);
+	background-size: cover;
+	overflow-y:hidden; 
+}
+
+#wikiKanto{
+
+	padding: 1%;
+	background-size: 150px;
+	width: 10%;
+	margin-left: 15%;
+} 
+ul{
+
+	background-color: #EDED06;
+}
