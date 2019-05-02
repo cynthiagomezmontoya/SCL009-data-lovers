@@ -3,8 +3,14 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const example = () => {
-  return 'example';
+const filterData = (data, condition) => {
+  return data.filter(function(monster) {
+    for (var key in condition) {
+      if (monster[key] === undefined || monster[key] != condition[key])
+        return false;
+    }
+    return true;
+  });
 };
 
-window.example = example;
+window.filterData = filterData;
