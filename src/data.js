@@ -15,4 +15,14 @@ const filterData = (data, condition) => {
   });
 };
 
+const sortData = (data, sortBy, sortOrder) => {
+  return 'sortData';
+};
+
+const computeStats = (data) => {
+  return 'computeStats';
+};
+
 window.filterData = filterData;
+window.sortData = sortData;
+window.computeStats = computeStats;
