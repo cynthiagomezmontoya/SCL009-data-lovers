@@ -4,10 +4,11 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const ourData = POKEMON.pokemon;
-
+//en esta funcion se filtra el tipo de pokemon
 const filterData = (data, condition) => {
   return data.filter(function(monster) {
     for (var key in condition) {
+      debugger;
       if (monster[key] === undefined || monster[key] != condition[key])
         return false;
     }
