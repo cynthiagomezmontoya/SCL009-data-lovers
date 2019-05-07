@@ -11,26 +11,32 @@
       <div id="wikiKanto">
         <img src="./img/prueba.png">
       </div>
-      <div id="root">
-        <ul class="nav">
-          <li class="nav-item">
-            <select id="selectType" name="selectATypeAPokemon" >
-              <option value="value1">Selecciona un tipo</option>
-              <option value="value2">Orden alfabetico</option>
-              <option value="value3">Numerico</option>
-              <option value="value4">Pokémon Aire</option>
-            </select>
-          </li>
-          <li class="nav-item">
-             <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-             <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>  
+      <div>
+        <select id="selectType" name="selectATypeAPokemon" >
+          <option disabled selected>Selecciona una opción</option>
+          <option value="Electric">Electrico</option>
+          <option value="Fire">Fuego</option>
+          <option value="Water">Agua</option>
+          <option value="Poison">Venenoso</option>
+          <option value="Grass">Hierba</option>
+          <option value="Flying">Vuelo</option>
+          <option value="Bug">Insecto</option>
+          <option value="Normal">Normal</option>
+          <option value="Ground">Tierra</option>
+        </select>
+      </div>
+      </br>
+      <div class="headerTable row">
+        <div class="col-1">NÚMERO</div>
+        <div class="col-2 pokemonImage">POKÉMON</div>
+        <div class="col-2">NOMBRE</div>
+        <div class="col-2">TIPOS</div>
+        <div class="col-3">DEBILIDADES</div>
+        <div class="col-1">ALTURA</div>
+        <div class="col-1">PESO</div>
+        <div class="w-100"></div>
+      </div>
+      <div id="root" class="row">
       </div>
     </div>
 
