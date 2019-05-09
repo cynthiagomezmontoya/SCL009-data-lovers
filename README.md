@@ -1,96 +1,58 @@
 # **Data Lovers**
 
-## **Índice**
+##  * WIKIKANTO *
 
-* [Preámbulo](#preámbulo)
-* [Descripción](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Parte opcional](#parte-opcional-hacker-edition)
-* [Consideraciones técnicas](#consideraciones-técnicas)
-* [Primeros pasos](#primeros-pasos)
-* [Contenido de referencia](#contenido-de-referencia)
-* [Checklist](#checklist)
+
+### **Índice**
+
+* Introducción " wikiKanto "
+* Descripción del Proyecto
+* Objetivos de Aprendizaje
+* Definición del Producto
+* Historia de Usuarios
+   * Encuestas 
+* Diseño de la interfaz de Usuario
+   * Prototipo de baja Fidelidad
+   * Prototipo de alta Fidelidad
+   * Testeo de Usabilidad
+* Pruebas Unitarias
+* Consideraciones Tecnicas
+* Contenido de Referencia
+   * Herramientas 
+
 
 ***
 
-## **1. Preámbulo**
+## **Introducción**
 
-Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
+Pokémon GO es un videojuego de realidad aumentada basado en la localización desarrollado por Niantic, Inc.para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones.El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. La aplicación comporta un elemento de interacción social, ya que promueve reuniones físicas de los usuarios en distintas ubicaciones de sus poblaciones.
+(https://pokemongolive.com/es/).
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+\* Puedes ver el datalle de la data en este [link (https://github.com/Laboratoria/SCL009-data-lovers/blob/master/src/data/pokemon/pokemon.json)
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+## ** Descripción del proyecto**
 
-\* Puedes ver el datalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+En este proyecto **construiremos  una página web para visualizar un
+conjunto (set) de datos que se adecúe a lo que descubramos en la necesidad de los usuarios.
 
-## **2. Resumen del proyecto**
+En este proyecto nos enforcaremos en realizar una pagina web interartiva, donde usuarios ,tanto principiantes(en el cual esta enfocado principalmente el desarrollo de nuestra paguina) y usuarios expertos, puedan realizar una busqueda mas eficientes ,para conocer los tipos de pokemon que  extisten, ordenarlos por nombre  y de esa forma desarrollar una busqueda mas adecuada a lo que cada usuario necesita y de esta manera desarrollar una nueva experiencia en cada una de sus busquedas y sus batallas con los contrincantes.
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+Como entrega final,tendremos una pagina que permitira visualizar la data,filtrar por tipo de pokemon,tambien se podra realizar un orden alfabetico por nombre y finalmente un calculo ---------
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
 
-Una vez que definas tu área de interés, entiende quién es tu usuario y qué
-necesita saber o ver exactamente; luego podrás construir la interfaz que le
-ayude a interactuar y entender mejor esos datos.
+## ** Objetivos de aprendizaje**
 
-Estos son datos que te proponemos:
-
-* [Banco Mundial](src/data/worldbank/worldbank.json) Indicadores de desarrollo del Banco Mundial de algunos países (Brasil, Chile, 
-  México y Perú). Estos datos incluyen indicadores demográficos, económicos y 
-  comerciales.
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
-  junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](https://pokemongolive.com).
-* [Steam noticias](src/data/steam/steam.json):
-  Lista noticias relacionadas a los videojuegos presentes en la
-  plataforma de [Steam](https://store.steampowered.com/).
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de jugadores en una liga del
-  juego League of Legends (LoL), puedes revisar la documentación de su API en
-  este [link](https://developer.riotgames.com/api-methods/).
-* [Personas heridas por medio de transporte en EEUU](src/data/injuries/injuries.json).
-  Este set nos muestra el número de personas heridas en accidentes de
-  transporte, con data anual desde 1960 y categorizada por tipo de transporte
-  (aire, barco, automóvil, moto, bicileta, ...).
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún calculo agregado**. Como aclaración,
-con cálculo agregado nos referimos a distintos cálculos que puedes hacer con
-la data que tienes para mostrar información aún más relevante a los usuarios.
-Una opción serían cálculos estadísticos como el promedio, el máximo o el mínimo,
-por ejemplo, si tenemos una colección que representa a un grupo de personas,
-y cada persona está representada como un _objeto_ con una _propiedad_ `altura`,
-podríamos elegir calcular la altura promedio en el grupo entre otras cosas.
-
-## **3. Objetivos de aprendizaje**
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
+El objetivo principal de este proyecto sera basado diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+usuario necesite.
 
-Dicho en palabras sencillas, aprenderás a:
+Aprendizajes a desarrollar:
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Pensar en las **necesidades de los usuarios** para crear historias de usuario.
-* Escribir y trabajar con **historias de usuario**, sus definiciones de
-  terminado (_definition of done_) en la organización y planificación de tu
-  trabajo.
+* Aplicar y profundizar todo lo aprendido en el proyecto anterior.
+* Crear historias de usuarios.
+* Escribir y trabajar con **historias de usuario**, sus definiciones 
+  (_definition of done_) en la organización y planificación del proyecto.
 * Definir qué data y de qué forma mostrarla en el producto, basándote en
   tu **entendimiento del usuario**.
 * Crear productos que sigan los **principios básicos de diseño visual** y
@@ -104,43 +66,65 @@ Dicho en palabras sencillas, aprenderás a:
 * Entender los beneficios y complejidades de **trabajar en equipo** en un
   ambiente de incertidumbre.
 
-## **4. Consideraciones generales**
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: El proyecto dura 4
- semanas, trabaja con sprints 
-y planificando tus tareas.
-* La división y organización del trabajo debe permitir, sin excepciones, que **cada integrante** del equipo practique el aprendizaje de todo lo involucrado en **cada historia**. No se dividan el trabajo como en una fábrica.
-* Antes de comenzar, conversen sobre cómo le fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de cada una hacer lo que ya sabe bien cómo hacer. Aprovechen la oportunidad de hacer lo que no saben bien. Acá estás para aprender, no para "entregar" proyectos solamente.
-* Una vez que hayan definido y priorizado sus Historias de Usuario, solamente podrán trabajar en una por vez, no pueden avanzar a la siguiente sin haber completado la anterior. La historia se completa cuando se cumplen **todos** sus Criterios de Aceptación + **toda** su Definición de Terminado.
+### ** Definición del producto**
 
-## **5. Criterios de Aceptación Mínimos del Proyecto**
+El proceso de diseño se desarrollo analizando los resultados de encuestas realizadas a través de internet y en Parque Forestal a diferentes grupos de usuarios.
+El producto final resuelve problemas a usuarios tanto como principiantes y expertos,es decir,lograran conocer los diversos tipos de Pokemon que existen,tambien conocer sus nombres y poder ordenarlos ........ El usuario al manejar esta informacion podra tambien saber mas sobre ellos y cual es mejor para poder desarrollar sus batallas en los  gimnasios con distintos contrincantes.
 
-Los criterios para considerar que has completado este proyecto son:
 
-### **5.1 Definición del producto**
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+### ** Historias de usuario**
 
-### **5.2 Historias de usuario**
 
-Una vez que entiendas las necesidades de tu usuario, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Asegúrate de incluir una definición
-de terminado (_definition o done_) para cada una.
+Nuestra Historias de usuarios, se desarrollo basandose encuentas realizadas a traves de internet y en el Parque Forestal.
+Se encuesto un total de 98 usuarios.
+Algunas preguntas realizadas fueron:
 
-### **5.3 Diseño de la Interfaz de Usuario**
+¿ Por que jugaban ?
+Tiempo aproximado que llevaban jugando
+Nivel de jugador
+Horas semales de juego
+¿Si recien empezaran a jugar, queles hubiese gustado saber ?
+Se saben todos los tipos de Pokemon
+Se saben todos los nombres de Pokemon
+¿ Cuanto tiempo se demora en nacer un Pokemon?
+¿ Que estrategias conoces?
+
+Con toda la informacion que recolectamos , nuestra historia de usuario es la siguiente:
+
+* `COMO     =     JUGADOR`
+* `QUIERO   =     APRENDER NOMBRES Y TIPOS DE POKEMON`
+* `PARA     =     DESAFIAR A OTROS JUGADORES, PARA GANAR BATALLAS Y TENER UN GIMNASIO`
+
+##  * Criterios de Aceptación *
+
+* Buscar por tipo cada Pokemon
+* Buscar un tipo en especial
+* Lista de Pokemones del mismo tipo
+* Seleccionar Pokemon de su gusto
+* Que aparesca informacion (id,imagen,nombre,tipo,debilidades,altura,peso)
+* Escoger Pokemon seleccionado o buscar otro
+
+* Ordenar por nombre los Pokemones de la lista
+
+*---------
+
+
+
+### ** Diseño de la Interfaz de Usuario**
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado sketches (boceto) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que realices, y las subas a tu repositorio, y las menciones en tu
-`README.md`.
+Durante el trabajo se realizaron varios sketches de nuestro prototipo usando papel y lapiz.
+
+
+
+
+
+
+Los prototipos de baja fidelidad, fueron utilizados en la primera entrevista, siendo de gran utilidad para poder realizar los primeros cambios en el proyecto.
+
 
 #### Prototipo de alta fidelidad
 
@@ -159,6 +143,9 @@ tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de
 estilo que te dé Zeplin al momento de implementar tus diseños en código.
 
 #### Testeos de usabilidad
+
+
+Se realizaron varios tests de usabilidad con distintos usuarios, en distintos fases del proyecto y con los resultados obtenidos, se realizo una mejora importante 
 
 Durante el reto deberás realizar tests de usabilidad con distintos usuarios, y
 en base a los resultados de esos tests, deberás iterar tus diseños. Cuéntanos
@@ -220,7 +207,9 @@ e independientes del DOM. Estas funciones serán después usadas desde el archiv
 `src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
 filtrado, ordenado, ...).
 
-## **6. Parte Opcional (Hacker edition)**
+
+
+
 
 Features/características extra sugeridas:
 
@@ -252,21 +241,21 @@ como toda la configuración de dependencias:
 ├── README.md
 ├── src
 │   ├── data
-│   │   ├── injuries
-│   │   │   ├── injuries.js
-│   │   │   └── injuries.json
-│   │   ├── lol
-│   │   │   ├── lol.js
-│   │   │   └── lol.json
+│   │   ├
+│   │   │   
+│   │   │   
+│   │   │ 
+│   │   │  
+│   │   │   
 │   │   ├── pokemon
-│   │   │   ├── pokemon.js
-│   │   │   └── pokemon.json
-│   │   ├── steam
-│   │   │   ├── steam.js
-│   │   │   └── steam.json
-│   │   └── worldbank
-│   │       ├── worldbank.js
-│   │       └── worldbank.json
+│   │     ├── pokemon.js
+│   │      └── pokemon.json
+│   │   
+│   │    
+│   │   
+│   │   
+│   │       
+│   │       
 │   ├── data.js
 │   ├── index.html
 │   ├── main.js
@@ -337,193 +326,55 @@ asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_A
 Tendrás también que completar las pruebas unitarias de las funciones
 implementadas en el archivo `data.js`.
 
-## **8. Evaluación**
-Recuerda revisar la [rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada habilidad y cada nivel. Esta es una
-lista de todas las habilidades involucradas en este proyecto y que evaluaremos
-cuando lo completes:
 
-### **General**
 
-| Característica/Habilidad |
-|--------------------------|
-| Completitud |
 
-### **Tech**
 
-| Habilidad |
-|-----------|
-| **JavaScript** |
-| Estilo |
-| Nomenclatura/semántica |
-| Funciones/modularidad |
-| Estructuras de datos |
-| Tests |
-| **HTML** |
-| Validación |
-| Estilo |
-| Semántica |
-| **CSS** |
-| DRY |
-| Responsive |
-| **SCM** |
-| Git |
-| GitHub |
-| **CS** |
-| Lógica |
-| Arquitectura |
 
-### **UX**
-
-| Habilidad |
-|-----------|
-| User Centricity |
-| Visual Design |
-
-### **Habilidades Blandas**
-
-| Habilidad |
-|-----------|
-| Planificación y organización |
-| Autoaprendizaje |
-| Solución de problemas |
-| Dar y recibir feedback |
-| Adaptabilidad |
-| Trabajo en equipo |
-| Comunicación eficaz |
-| Presentaciones |
-
-***
-
-## **Pistas sobre cómo empezar a trabajar en el proyecto**
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
 
 * ¿Quiénes son los principales usuarios de producto?
 * ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 * ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 * ¿Cuándo utilizan o utilizarían el producto?
 
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1)
-   un `remote` hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. A codear se ha dicho! :rocket:
 
-<!--
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las
-integrantes del equipo deberá forkear el repositorio del cohort y la otra
-integrante **deberá hacer un fork del repositorio de su compañera**. Luego de
-esto, deberás
-[configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-un `remote` hacia el repositorio del cual hiciste el fork.
 
-Para mandar cambios desde un repositorio forkeado al original debes crear un
-[pull request](https://goo.gl/4bYnuh)
-y el propietario del repositorio original recibirá una notificación para
-[revisar el pull request](https://goo.gl/XSFcT5)
-y [aceptar los cambios](https://goo.gl/HLJtqN).
 
-Aquí algunas recomendaciones para que organices mejor el trabajo con tu
-compañera:
 
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de
-  trabajo con dos ramas principales:
-  - `master`: rama que contiene las funcionalidades terminadas y sin errores.
-  - `develop`: rama dónde integrarás las funcionalidades conforme las vayas
-    desarrollando.
 
-* Además de tener las dos ramas anteriores, puedes trabajar cada nueva
-  funcionalidad en una rama individual (_feature branches_), estas ramas en
-  lugar de crearse a partir de `master`, tienen a `develop` como su rama de
-  origen. Cuando una funcionalidad es terminada se integra de nuevo a `develop`.
-  Las _feature branches_ no se deben integrar directamente a `master`.
 
-* Por último, te sugerimos codear usando la técnica de
-  [pair programming](https://goo.gl/uAMBX2).
 
-¿Quieres saber más forks y pull requests?
 
-* Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un
-  repositorio en el que puedes experimentar sin afectar al repositorio original.
-  Generalmente se usa para proponer cambios al proyecto de alguien más o para
-  usar el proyecto de otra persona como punto de partida para una idea que
-  quieras realizar.
+### **Contenido de Referencia **
 
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR)
-  te permite solicitar la inclusión de cambios al repositorio original (tu punto
-  de partida) en GitHub. Cuando un PR es abierto, este permite solicitar,
-  discutir y revisar los cambios realizados con todos los colaboradores y
-  agregar otros commits antes de que los cambios sean incluidos al repositorio
-  original.
--->
 
-***
-
-## **10. Contenido de referencia**
-
-### **Diseño de experiencia de usuario (User Experience Design)**
-
+* Diseño de experiencia de usuario (User Experience Design)
 * Investigación con usuario
-* [Principios de diseño visual](https://lms.laboratoria.la/cohorts/scl-2019-01-bc-core-commoncore-scl008/courses/diseno-visual)
+* Principios de diseño visual
+* Desarrollo Front-end
+* Unidad de testing en curso de JavaScript en LMS
+* Unidad de arreglos en curso de JavaScript en LMS
+* Unidad de objetos en curso de JavaScript en LMS
+* Unidad de funciones en curso de JavaScript en LMS
+* Unidad de DOM en curso de Browser JavaScript en LMS
+* Array en MDN
+* Array.sort en MDN
+* Array.map en MDN
+* Array.filter en MDN
+* Array.reduce en MDN
+* Array.forEach en MDN
+* Object.keys en MDN
+* Object.entries en MDN
+* Fetch API en MDN
+* json.org
+
+## Herramientas
+* Git
+* GitHub
+* GitHub Pages
+* Node.js
+* Visual studio code
 
 
-### **Desarrollo Front-end**
 
-* [Unidad de testing en curso de JavaScript en LMS](https://lms.laboratoria.la/cohorts/scl-2019-03-bc-core-common-core-scl009/courses/javascript/11-testing/00-opening)
-* [Unidad de arreglos en curso de JavaScript en LMS](https://lms.laboratoria.la/cohorts/scl-2019-03-bc-core-common-core-scl009/courses/javascript/04-arrays/01-arrays)
-* [Unidad de objetos en curso de JavaScript en LMS](https://lms.laboratoria.la/cohorts/scl-2019-03-bc-core-common-core-scl009/courses/javascript/05-objects/01-objects)
-* [Unidad de funciones en curso de JavaScript en LMS](https://lms.laboratoria.la/cohorts/scl-2019-03-bc-core-common-core-scl009/courses/javascript/03-functions/00-opening)
-* [Unidad de DOM en curso de Browser JavaScript en LMS](https://lms.laboratoria.la/cohorts/scl-2019-03-bc-core-common-core-scl009/courses/browser/02-dom/00-opening)
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-
-### **Herramientas**
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-
-***
-
-## **Checklist**
-
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
-* [ ] Pasa linter (`npm pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
