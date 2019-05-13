@@ -1,0 +1,63 @@
+body{
+  background-color:#F73939;
+  background-size: cover;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+footer{
+  color: white;
+  text-align: center;
+}
+
+#wikiKanto{
+  padding: 1%;
+  background-size: 150px;
+  height: auto;
+  max-width: 100%; 
+  margin-left: 15%;
+  margin-top: 2%; 
+  margin-bottom: 2%; 
+} 
+
+#navSelect{
+  border-top: 78px;
+  border-color: blue;
+}
+
+select{
+  background-color: #F7F4F4 ; 
+  width: 180px;
+  height: 40px;
+  margin-right: 3%;
+}
+
+span{
+  color: white;
+}
+
+.statLabel{
+  font-weight: 900;
+}
+
+.pokemonImage{
+  text-align: center;
+}
+
+.card{
+  padding-top: 20px;
+  background-color: #F7F4F4;
+  text-align: center;
+  margin-top: 15px; 
+  min-height: 380px;
+}
+
+#stats{
+  text-align: center;
+  color: white;
+}
+
+.card-span{
+  color: black;
+  font-weight: 900;
+}  
