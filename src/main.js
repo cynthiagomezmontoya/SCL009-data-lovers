@@ -20,4 +20,16 @@ const num = document.getElementById('calculation');
     })
     });
       
-  
+  //CALCULO
+//Dentro de la funcion se pide que aparezca el del calculo
+document.getElementById("lol-filter").addEventListener("change",() => {
+    document.getElementById("calculation").style.display = "block";
+    let tags = document.getElementById("lol-filter").value; 
+    let calcResult = window.computeStats(lolData,tags);
+    num.innerHTML ="";
+    num.innerHTML +=  `
+    <div>
+      <p> Del total de los campeones; ${calcResult} juegan este Rol </p>
+    </div> 
+    `    
+  });
